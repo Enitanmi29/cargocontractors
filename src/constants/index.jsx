@@ -1,7 +1,7 @@
 export const contact = [
 { header:'Mobile',
   paragraph:'08059780090',
-  link:'https://whatsapp.com/dl/'
+  link:'https://wa.me/2348055078040'
 },
 { header:'GMail',
     paragraph:'Cargocontractors@gmail.com',
