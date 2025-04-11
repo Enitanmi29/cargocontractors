@@ -26,7 +26,7 @@ const Home = () => {
               </div>
               <div className='row justify-content-center'>
                   <p className='fs-4'> 
-                      We are the premier import and export agency in Africa. Our network spreads to differet part of the word.
+                      We are the premier import and export agency in Africa. Our network spreads to different parts of the world.
                   </p>
                   <div className='rounded'>
                       <img

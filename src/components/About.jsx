@@ -9,7 +9,7 @@ const About = () => {
             </div>
             <div className='row justify-content-center g-0'>
                 <p className='fs-3'> 
-                    We are the premier import and export agency in Africa. Our network spreads to differet part of the word.
+                    We are the premier import and export agency in Africa. Our network spreads to different parts of the world.
                 </p>
                 <div className='row rounded-2 my-4'>
                     <img
