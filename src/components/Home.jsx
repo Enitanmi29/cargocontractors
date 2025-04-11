@@ -71,7 +71,7 @@ const Home = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="row align-items-md-center g-5 p-4 bg-primary-subtle">
+            <div className="row align-items-md-center g-3 p-5 bg-primary-subtle">
               <h1 className='text-center'>Contact Us: </h1>
     
               <div class="col">
