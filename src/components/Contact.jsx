@@ -4,7 +4,7 @@ import { contact } from '../constants'
 const Contact = () => {
   return (
     
-        <div className="row align-items-md-center g-5 p-5 bg-primary-subtle">
+        <div className="row align-items-md-center g-0 p-5 bg-primary-subtle">
             <h1 className='text-center'>Contact Us: </h1>
     
           <div className="col">

@@ -6,7 +6,7 @@ const Services = () => {
     <div>
         <h1 className='text-center pt-5'>Our Services:</h1>
 
-        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 p-5">
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-0 p-5">
 
             <div class="col col-lg-6 col-sm-12 col-md-12 d-flex flex-column align-items-start gap-2">
                 <h2 class="fw-bold text-body-emphasis">Import and Export</h2>
