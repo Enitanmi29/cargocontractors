@@ -1,8 +1,99 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Track = () => {
+    const [formData, setFormData] = useState({
+            email:'',
+            cargo:'',
+            number:'',
+
+    });
+
+    const [error, setError] = useState('');
+    
+    const cargoDatabase = [
+        {
+          cargo: 'DHL',
+          number: '12345',
+          url: 'https://www.dhl.com/global-en/home/tracking.html',
+        },
+        {
+          cargo: 'FedEx',
+          number: '54321',
+          url: 'https://www.fedex.com/en-us/tracking.html',
+        },
+        {
+          cargo: 'UPS',
+          number: '67890',
+          url: 'https://www.ups.com/track',
+        },
+      ];
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        setError('');
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const redirect = cargoDatabase.find(
+            (entry) =>
+              entry.cargo.toLowerCase() === formData.cargo.toLowerCase() &&
+              entry.number === formData.number
+        );
+
+        if (redirect) {
+            window.location.href = redirect.url;
+        } else {
+            setError('No match found. Please check your cargo name and tracking number.')
+        }
+    };
+
+
   return (
-    <div>Track</div>
+    <div>
+        <div className='container'>
+            <form onSubmit={handleSubmit} className='max-w-md mx-auto p-4 bg-white shadow rounded'>
+                <h2>Track your consignment</h2>
+                 
+                <input 
+                    type='email'
+                    name='email'
+                    placeholder='enter your email'
+                    value={formData.email}
+                    onChange={handleChange}
+                    className='w-full p-2 mb-3 border rounded'
+                    required
+                />  
+
+                <input 
+                    type='text'
+                    name='cargo'
+                    placeholder='enter cargo name'
+                    value={formData.cargo}
+                    onChange={handleChange}
+                    className='w-full p-2 mb-3 border rounded'
+                    required
+                />  
+
+                <input 
+                    type='text'
+                    name='number'
+                    placeholder='enter the tracking number'
+                    value={formData.number}
+                    onChange={handleChange}
+                    className='w-full p-2 mb-3 border rounded'
+                    required
+                /> 
+
+                <button type='submit'>
+                    Track
+                </button> 
+            </form>
+        {error && <p className='text-red-600 mt-3'>{error}</p>}
+        </div>
+    </div>
   )
 }
 
