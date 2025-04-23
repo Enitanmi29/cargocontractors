@@ -53,7 +53,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item ps-4">
-              <a className="nav-link" href="/contact" aria-expanded="false">
+              <a className="nav-link" href="/track" aria-expanded="false">
                 Track your Consignment
               </a>
             </li>
