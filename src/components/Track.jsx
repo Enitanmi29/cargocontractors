@@ -54,7 +54,7 @@ const Track = () => {
   return (
     <div>
         <div className='container bg-secondary-subtle'>
-            <form onSubmit={handleSubmit} className='d-block max-w-md mx-auto p-4 bg-white shadow rounded'>
+            <form onSubmit={handleSubmit} className='bg-secondary-subtle max-w-md mx-auto p-4 bg-white shadow rounded'>
                 <h2>Track your consignment</h2>
                  
                 <input 
@@ -63,7 +63,7 @@ const Track = () => {
                     placeholder='enter your email'
                     value={formData.email}
                     onChange={handleChange}
-                    className='w-full p-2 mb-3 border rounded'
+                    className='d-block w-full p-2 mb-3 border rounded'
                     required
                 />  
 
@@ -73,7 +73,7 @@ const Track = () => {
                     placeholder='enter cargo name'
                     value={formData.cargo}
                     onChange={handleChange}
-                    className='w-full p-2 mb-3 border rounded'
+                    className='d-block w-full p-2 mb-3 border rounded'
                     required
                 />  
 
@@ -83,11 +83,11 @@ const Track = () => {
                     placeholder='enter the tracking number'
                     value={formData.number}
                     onChange={handleChange}
-                    className='w-full p-2 mb-3 border rounded'
+                    className='d-block w-full p-2 mb-3 border rounded'
                     required
                 /> 
 
-                <button type='submit'>
+                <button type='submit' className='d-block btn btn-success'>
                     Track
                 </button> 
             </form>
