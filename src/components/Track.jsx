@@ -51,10 +51,11 @@ const Track = () => {
 
 
   return (
-    <div className='container bg-gray-100 min-h-screen p-6 mb-4'>
-        <div className='max-w-md bg-white p-6 rounded-lg shadow-md '>
+    <div className='container bg-light min-vh-100 py-4'>
+        <div className='card mx-auto' style={{maxWidth:'500px'}}>
+            <div className='card-b0dy'>
             <form onSubmit={handleSubmit} className='mt-4'>
-                <h2 className='text-xl font-semibold mb-4'>Track your consignment</h2>  
+                <h2 className='h5 mb-4'>Track your consignment</h2>  
 
                 <input 
                     type='text'
@@ -62,7 +63,7 @@ const Track = () => {
                     placeholder='enter cargo name'
                     value={formData.cargo}
                     onChange={handleChange}
-                    className='d-block w-full p-2 mb-4 border rounded'
+                    className='form-control'
                     required
                 />  
 
@@ -72,7 +73,7 @@ const Track = () => {
                     placeholder='enter the tracking number'
                     value={formData.number}
                     onChange={handleChange}
-                    className='d-block w-full p-2 mb-4 border rounded'
+                    className='form-control'
                     required
                 /> 
 
@@ -80,7 +81,8 @@ const Track = () => {
                     Track
                 </button> 
             </form>
-        {error && <p className='text-red-600 mt-3'>{error}</p>}
+        {error && <p className='text-danger mt-3'>{error}</p>}
+        </div>
         </div>
     </div>
   )
