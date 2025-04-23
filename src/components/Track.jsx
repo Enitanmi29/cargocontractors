@@ -51,9 +51,9 @@ const Track = () => {
 
 
   return (
-    <div className='bg-gray-100 min-h-screen p-6'>
-        <div className='max-w-md bg-white p-6 rounded-lg shadow-md'>
-            <form onSubmit={handleSubmit} >
+    <div className='container bg-gray-100 min-h-screen p-6'>
+        <div className='max-w-md bg-white p-6 rounded-lg shadow-md '>
+            <form onSubmit={handleSubmit} className='mt-4'>
                 <h2 className='text-xl font-semibold mb-4'>Track your consignment</h2>  
 
                 <input 
@@ -62,7 +62,7 @@ const Track = () => {
                     placeholder='enter cargo name'
                     value={formData.cargo}
                     onChange={handleChange}
-                    className='d-block w-full p-2 mb-3 border rounded'
+                    className='d-block w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
                     required
                 />  
 
