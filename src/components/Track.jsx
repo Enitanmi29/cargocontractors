@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 const Track = () => {
     const [formData, setFormData] = useState({
-            email:'',
             cargo:'',
             number:'',
 
@@ -53,19 +52,9 @@ const Track = () => {
 
   return (
     <div>
-        <div className='container bg-secondary-subtle'>
+        <div className='my-3'>
             <form onSubmit={handleSubmit} className='bg-secondary-subtle max-w-md mx-auto p-4 bg-white shadow rounded'>
-                <h2>Track your consignment</h2>
-                 
-                <input 
-                    type='email'
-                    name='email'
-                    placeholder='enter your email'
-                    value={formData.email}
-                    onChange={handleChange}
-                    className='d-block w-full p-2 mb-3 border rounded'
-                    required
-                />  
+                <h2>Track your consignment</h2>  
 
                 <input 
                     type='text'
