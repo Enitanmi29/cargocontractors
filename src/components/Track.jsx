@@ -51,7 +51,7 @@ const Track = () => {
 
 
   return (
-    <div className='container bg-light min-vh-100 py-4'>
+    <div className='container min-vh-100 py-4'>
         <div className='card mx-auto' style={{maxWidth:'500px'}}>
             <div className='card-body px-4'>
             <form onSubmit={handleSubmit} className='mt-4'>
@@ -63,7 +63,7 @@ const Track = () => {
                     placeholder='enter cargo name'
                     value={formData.cargo}
                     onChange={handleChange}
-                    className='form-control my-2'
+                    className='form-control my-4'
                     required
                 />  
 
@@ -73,11 +73,11 @@ const Track = () => {
                     placeholder='enter the tracking number'
                     value={formData.number}
                     onChange={handleChange}
-                    className='form-control my-2'
+                    className='form-control my-4'
                     required
                 /> 
 
-                <button type='submit' className='d-block btn btn-success w-full p-2 mb-4'>
+                <button type='submit' className='d-block btn btn-success w-100 p-2 mb-4'>
                     Track
                 </button> 
             </form>
