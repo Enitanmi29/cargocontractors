@@ -51,10 +51,10 @@ const Track = () => {
 
 
   return (
-    <div>
-        <div className='my-3 card'>
-            <form onSubmit={handleSubmit} className='card max-w-md mx-auto p-4 bg-white shadow rounded' style={{justifyItems:'start'}}>
-                <h2>Track your consignment</h2>  
+    <div className='bg-gray-100 min-h-screen p-6'>
+        <div className='max-w-md bg-white p-6 rounded-lg shadow-md'>
+            <form onSubmit={handleSubmit} >
+                <h2 className='text-xl font-semibold mb-4'>Track your consignment</h2>  
 
                 <input 
                     type='text'
