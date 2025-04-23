@@ -52,6 +52,11 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
+            <li className="nav-item ps-4">
+              <a className="nav-link" href="/contact" aria-expanded="false">
+                Track your Consignment
+              </a>
+            </li>
           </ul>
           <form className="d-flex" onSubmit={handleSearch}>
             <input 
