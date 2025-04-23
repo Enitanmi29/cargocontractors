@@ -53,8 +53,8 @@ const Track = () => {
 
   return (
     <div>
-        <div className='container'>
-            <form onSubmit={handleSubmit} className='max-w-md mx-auto p-4 bg-white shadow rounded'>
+        <div className='container bg-secondary-subtle'>
+            <form onSubmit={handleSubmit} className='d-block max-w-md mx-auto p-4 bg-white shadow rounded'>
                 <h2>Track your consignment</h2>
                  
                 <input 
