@@ -9,23 +9,13 @@ const Track = () => {
 
     const [error, setError] = useState('');
     
-    const cargoDatabase = [
-        {
-          cargo: 'DHL',
-          number: '12345',
-          url: 'https://www.dhl.com/global-en/home/tracking.html',
-        },
-        {
-          cargo: 'FedEx',
-          number: '54321',
-          url: 'https://www.fedex.com/en-us/tracking.html',
-        },
-        {
-          cargo: 'UPS',
-          number: '67890',
-          url: 'https://www.ups.com/track',
-        },
-      ];
+    const cargoDatabase = {
+      dhl: 'https://www.dhl.com/global-en/home/tracking.html?trackingNumber=',
+      fedex: 'https://www.fedex.com/fedextrack/?trknbr=',
+      ups: 'https://www.ups.com/track?tracknum=',
+      maersk: 'https://www.maersk.com/tracking/?trackingNumber='
+    }
+      
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -36,14 +26,13 @@ const Track = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const redirect = cargoDatabase.find(
-            (entry) =>
-              entry.cargo.toLowerCase() === formData.cargo.toLowerCase() &&
-              entry.number === formData.number
-        );
+        const cargoKey = formData.cargo.trim().toLowerCase();
+        const trackingNumber = formData.number.trim();
 
-        if (redirect) {
-            window.location.href = redirect.url;
+
+        if (cargoDatabase[cargoKey]) {
+            const finalURL = cargoDatabase[cargoKey] + trackingNumber;
+            window.location.href = finalURL;
         } else {
             setError('No match found. Please check your cargo name and tracking number.')
         }
@@ -60,7 +49,7 @@ const Track = () => {
                 <input 
                     type='text'
                     name='cargo'
-                    placeholder='enter cargo name'
+                    placeholder='Cargo name (e.g DHL)'
                     value={formData.cargo}
                     onChange={handleChange}
                     className='form-control my-4'
@@ -70,7 +59,7 @@ const Track = () => {
                 <input 
                     type='text'
                     name='number'
-                    placeholder='enter the tracking number'
+                    placeholder='Tracking number'
                     value={formData.number}
                     onChange={handleChange}
                     className='form-control my-4'
