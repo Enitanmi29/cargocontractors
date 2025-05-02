@@ -89,6 +89,7 @@ const Home = () => {
                   ))}
                 </div>
               </div>
+              <button className='btn btn-success my-4 justify-center'> explore </button>
             </div>
         </div>          
     </div>
