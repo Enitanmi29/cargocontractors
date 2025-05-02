@@ -1,5 +1,6 @@
 import React from 'react'
 import { contact1, services1 } from '../constants'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -47,16 +48,16 @@ const Home = () => {
                 <div className="col d-flex flex-column align-items-start ">
                   <h2 className="fw-bold text-body-emphasis">Import and Export</h2>
                   <p className="text-body-secondary fs-5">We deal with cargo handling.</p>
-                  <a href="/services" class="btn btn-success btn-lg">Learn more</a>
+                  <a href="/services" className="btn btn-success btn-lg">Learn more</a>
                 </div>
 
                 <div className="col">
                   <div className="row">
-                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                    <div className="row row-cols-1 row-cols-sm-2 g-4">
                         {services1.map((prop,index) => (
-                          <div class="col d-flex flex-column gap-2" key={index}>
-                              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-secondary bg-gradient fs-3 rounded-3">
-                                  <svg class="bi" width="1em" height="1em">
+                          <div className="col d-flex flex-column gap-2" key={index}>
+                              <div className="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-secondary bg-gradient fs-3 rounded-3">
+                                  <svg className="bi" width="1em" height="1em">
                                      <use xlink:href="#collection"></use>
                                   </svg>
                               </div>
@@ -89,7 +90,7 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-              <button className='btn btn-success my-4 justify-center'> explore </button>
+              <Link to='/contact' className='btn btn-success btn-lg justify-center'> explore </Link>
             </div>
         </div>          
     </div>
