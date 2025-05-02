@@ -90,7 +90,9 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-              <Link to='/contact' className='btn btn-success btn-lg justify-center'> explore </Link>
+              <div className='justify-content-center'>
+                <Link to='/contact' className='btn btn-success btn-lg'> explore </Link>
+              </div>
             </div>
         </div>          
     </div>
