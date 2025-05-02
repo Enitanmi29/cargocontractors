@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="col d-flex flex-column align-items-start ">
                   <h2 className="fw-bold text-body-emphasis">Import and Export</h2>
                   <p className="text-body-secondary fs-5">We deal with cargo handling.</p>
-                  <a href="/services" className="btn btn-success btn-lg">Learn more</a>
+                  <Link to ="/services" className="btn btn-primary btn-lg"> Learn more </Link>
                 </div>
 
                 <div className="col">
@@ -90,8 +90,8 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-              <div className='justify-content-center'>
-                <Link to='/contact' className='btn btn-success btn-lg'> explore </Link>
+              <div className='d-flex justify-content-center'>
+                <Link to='/contact' className='btn btn-primary btn-lg'> Explore </Link>
               </div>
             </div>
         </div>          
