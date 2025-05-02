@@ -13,9 +13,38 @@ const Track = () => {
       dhl: 'https://www.dhl.com/global-en/home/tracking.html?trackingNumber=',
       fedex: 'https://www.fedex.com/fedextrack/?trknbr=',
       ups: 'https://www.ups.com/track?tracknum=',
-      maersk: 'https://www.maersk.com/tracking/?trackingNumber='
+      maersk: 'https://www.maersk.com/tracking/?trackingNumber=',
+      hapaglloyd: 'https://www.hapag-lloyd.com/en/online-business/track/track-by-booking.html?bl=',
+      cmacgm: 'https://www.cma-cgm.com/ebusiness/tracking?SearchBy=Container&Reference=',
+      msc: 'https://www.msc.com/track-a-shipment?shipRefType=container&shipRefNumber=',
+      cosco: 'https://elines.coscoshipping.com/ebusiness/cargoTracking?trackingType=container&number=',
+      evergreen: 'https://www.evergreen-line.com/tps/service/Tracking.jsp?type=C&number=',
+      one: 'https://ecomm.one-line.com/one-ecom/containerTracking?bookingRef=',
+      yangming: 'https://www.yangming.com/e-service/track_trace/track_trace_cargo_tracking.aspx?trackNumbers=',
+      zim: 'https://www.zim.com/tools/track-a-shipment?refType=Container&refNumber=',
+      nyk: 'https://www.nykline.com/english/service/container/tracking/track.htm?cntr_no=',
+      amazon: 'https://www.amazon.com/progress-tracker/package/'
     }
-      
+
+    const cargoAliases = {
+      'mediterranean shipping company': 'msc',
+      'maersk': 'maersk',
+      'dhl': 'dhl',
+      'fedex': 'fedex',
+      'ups': 'ups',
+      'maersk': 'maersk',
+      'hapag lloyd': 'hapaglloyd',
+      'hapag-lloyd': 'hapaglloyd',
+      'cma cgm': 'cmacgm',
+      'msc': 'msc',
+      'cosco': 'cosco',
+      'evergreen': 'evergreen',
+      'one': 'one',
+      'yang ming': 'yangming',
+      'zim': 'zim',
+      'nyk': 'nyk',
+      'amazon': 'amazon'
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,15 +55,16 @@ const Track = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const cargoKey = formData.cargo.trim().toLowerCase();
-        const trackingNumber = formData.number.trim();
+        const cargoName = formData.cargo.trim().toLowerCase();
+        const cargoKey = cargoAliases[cargoName];
 
+        const trackingNumber = formData.number.trim().toLowerCase();
 
-        if (cargoDatabase[cargoKey]) {
+        if (cargoKey && cargoDatabase[cargoKey]) {
             const finalURL = cargoDatabase[cargoKey] + trackingNumber;
             window.location.href = finalURL;
         } else {
-            setError('No match found. Please check your cargo name and tracking number.')
+            window.location.href = 'https://www.track-trace.com/';
         }
     };
 

@@ -19,7 +19,7 @@ export const contact = [
 
 export const contact1 = [
     { header:'Mobile',
-      paragraph:'08059780090',
+      paragraph:'08055278040',
         
       },
       { header:'GMail',
@@ -27,11 +27,11 @@ export const contact1 = [
           
       },
       { header:'Instagram',
-        paragraph:'@Cargo_contractors.</',
+        paragraph:'@Cargo_contractors',
           
       },
       { header:'Twitter',
-        paragraph:'@Cargo_contractors.</',
+        paragraph:'@Cargo_contractors',
           
       },
 ]
