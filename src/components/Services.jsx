@@ -1,17 +1,17 @@
 import React from 'react'
 import { services } from '../constants'
-
+import { Link } from 'react-router-dom'
 const Services = () => {
   return (
     <div>
         <h1 className='text-center pt-5'>Our Services:</h1>
 
-        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-0 p-5">
+        <div className="row row-cols-1 row-cols-md-2 align-items-md-center g-0 p-5">
 
-            <div class="col col-lg-6 col-sm-12 col-md-12 d-flex flex-column align-items-start gap-2">
-                <h2 class="fw-bold text-body-emphasis">Import and Export</h2>
-                <p class="text-body-secondary fs-5">We deal with cargo handling.</p>
-                <a href="https:whatsapp.com/dl/" class="btn btn-success btn-lg">Learn more</a>
+            <div className="col col-lg-6 col-sm-12 col-md-12 d-flex flex-column align-items-start gap-2">
+                <h2 className="fw-bold text-body-emphasis">Import and Export</h2>
+                <p className="text-body-secondary fs-5">We deal with cargo handling.</p>
+                <Link to ="https://wa.me/2348055278040" class="btn btn-success btn-lg">Learn more</Link>
             </div>
 
             <div class="col">
